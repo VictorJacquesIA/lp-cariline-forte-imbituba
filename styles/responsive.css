@@ -54,9 +54,16 @@
     gap: 1.25rem;
   }
 
-  /* Áreas: 2 col (de 3) */
+  /* Áreas: 2 col em tablet (de 3) */
   .areas__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Último card sozinho na linha → centraliza em tablet */
+  .area__card:last-child:nth-child(2n + 1) {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin-inline: auto;
   }
 
   /* Processo: 2×2 */
@@ -126,7 +133,22 @@
     padding: 1.5rem;
   }
 
-  /* Áreas: padding menor */
+  /* Áreas: 1 coluna no mobile */
+  .areas__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Reset do posicionamento de centralização do desktop */
+  .area__card:last-child:nth-child(3n + 1) {
+    grid-column: auto;
+    max-width: 100%;
+    margin-inline: 0;
+  }
+
+  .area__text {
+    display: block;
+  }
+
   .area__card-inner {
     padding: 1.5rem;
   }
@@ -391,45 +413,25 @@
   }
 
   /* ─────────────────────────────────
-     ÁREAS — 2 col compacto (mobile)
-     Texto oculto: ícone + título + tag
-     bastam para escaneabilidade rápida.
+     ÁREAS — 1 card por vez (mobile)
   ───────────────────────────────── */
   .areas__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
+    grid-template-columns: 1fr;
+    gap: 0.875rem;
     margin-bottom: 2rem;
   }
 
   .area__card-inner {
-    padding: 1.125rem;
-    gap: 0.5rem;
+    padding: 1.375rem;
   }
 
-  .area__header {
-    gap: 0.625rem;
-  }
-
-  .area__icon svg {
-    width: 22px;
-    height: 22px;
-  }
-
-  .area__title {
-    font-size: 1.05rem;
-  }
-
-  /* Oculta descrição longa no grid compacto 2 col */
   .area__text {
-    display: none;
-  }
-
-  .area__tags {
-    padding-top: 0.25rem;
+    display: block;
+    font-size: 0.9rem;
   }
 
   .area__tag {
-    font-size: 0.6rem;
+    font-size: 0.625rem;
     padding: 0.15rem 0.5rem;
   }
 
@@ -638,20 +640,7 @@
    ══════════════════════════════════════ */
 @media (max-width: 480px) {
 
-  /* Áreas: 1 col — mostra descrição de volta */
-  .areas__grid {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-  }
-
-  .area__text {
-    display: block;
-    font-size: 0.875rem;
-  }
-
-  .area__card-inner {
-    padding: 1.25rem;
-  }
+  /* Áreas: já em 1 col desde ≤640px */
 
   /* Hero: foto ainda menor */
   .hero__photo-wrap {
