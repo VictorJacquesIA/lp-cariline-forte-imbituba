@@ -507,15 +507,18 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(16rem, 35vw, 32rem);
-  font-weight: 600;
-  color: rgba(17, 24, 39, 0.07);
-  letter-spacing: -0.05em;
-  line-height: 1;
+  width: clamp(18rem, 50vw, 36rem);
   pointer-events: none;
   user-select: none;
-  white-space: nowrap;
+}
+
+.cta-final__watermark img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.1;
+  mix-blend-mode: multiply;
+  filter: brightness(0);
 }
 
 .cta-final__inner {
