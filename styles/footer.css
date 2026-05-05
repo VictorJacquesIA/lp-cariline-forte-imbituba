@@ -10,11 +10,12 @@
 
 .footer__inner {
   display: grid;
-  grid-template-columns: 2fr 1fr 1.5fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 2fr 1fr 1.5fr 1fr 1.6fr;
+  gap: 2.5rem;
   padding-bottom: 3rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
   margin-bottom: 2rem;
+  align-items: start;
 }
 
 /* ── Brand ── */
@@ -107,30 +108,20 @@
 }
 
 /* ── Mapa ── */
-.footer__map-wrap {
-  padding-bottom: 2.5rem;
-}
-
-.footer__map-label {
+.footer__map-col {
   display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-gold);
-  margin-bottom: 0.75rem;
+  flex-direction: column;
 }
 
 .footer__map {
   width: 100%;
-  height: 220px;
+  height: 160px;
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid rgba(184, 148, 63, 0.15);
-  opacity: 0.85;
+  opacity: 0.82;
   transition: opacity 0.25s ease;
+  flex: 1;
 }
 
 .footer__map:hover {

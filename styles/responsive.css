@@ -86,7 +86,7 @@
     margin-inline: auto;
   }
 
-  /* Footer: 2+2 colunas */
+  /* Footer: 2+2 colunas, mapa ocupa linha inteira */
   .footer__inner {
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
@@ -94,6 +94,14 @@
 
   .footer__brand {
     grid-column: 1 / -1;
+  }
+
+  .footer__map-col {
+    grid-column: 1 / -1;
+  }
+
+  .footer__map {
+    height: 200px;
   }
 }
 
