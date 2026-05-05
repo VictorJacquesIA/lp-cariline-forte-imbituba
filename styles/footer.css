@@ -34,6 +34,21 @@
 }
 
 
+.footer__instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 1rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.footer__instagram:hover {
+  color: var(--color-gold);
+}
+
 .footer__tagline {
   font-size: 0.9rem;
   color: var(--color-text-muted);
