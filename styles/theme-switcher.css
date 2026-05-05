@@ -1,0 +1,238 @@
+/* ═══════════════════════════════════════
+   THEME SWITCHER
+   ═══════════════════════════════════════ */
+
+/* ── Wrapper fixo ── */
+.theme-switcher {
+  position: fixed;
+  top: 80px;
+  left: 16px;
+  z-index: 9999;
+}
+
+/* ── Botão toggle ── */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  background: var(--color-gold);
+  color: #1A1714;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.45rem 0.875rem;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
+  white-space: nowrap;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--color-gold-light);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.32);
+}
+
+.theme-toggle:active {
+  transform: translateY(0);
+}
+
+/* ── Painel flutuante ── */
+.theme-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
+  padding: 6px;
+  min-width: 172px;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.18),
+    0 1px 4px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(0, 0, 0, 0.04);
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  pointer-events: none;
+}
+
+.theme-panel.is-open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* ── Opções de tema ── */
+.theme-option {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  width: 100%;
+  padding: 0.5rem 0.625rem;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #1A1714;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.theme-option + .theme-option {
+  margin-top: 2px;
+}
+
+.theme-option:hover {
+  background: rgba(184, 148, 63, 0.09);
+}
+
+.theme-option.is-active {
+  border-color: rgba(184, 148, 63, 0.45);
+  background: rgba(184, 148, 63, 0.06);
+}
+
+/* Bolinha de preview */
+.theme-option__dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.theme-option__dot--dark {
+  background: #111827;
+  border: 1.5px solid #B8943F;
+}
+
+.theme-option__dot--light {
+  background: #F5F2EC;
+  border: 1.5px solid #B8943F;
+}
+
+.theme-option__name {
+  flex: 1;
+}
+
+.theme-option__check {
+  font-size: 0.7rem;
+  color: #B8943F;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.theme-option.is-active .theme-option__check {
+  opacity: 1;
+}
+
+/* ═══════════════════════════════════════
+   OVERRIDES — TEMA CLARO
+   ═══════════════════════════════════════ */
+
+/* Nav: fundo escuro sólido no tema claro — necessário para mix-blend-mode:screen da logo */
+[data-theme="light"] .header {
+  background: #0F1624;
+  border-bottom: 1px solid rgba(184, 148, 63, 0.18);
+}
+
+[data-theme="light"] .header--scrolled {
+  background: rgba(13, 20, 34, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Links do nav claros sobre fundo escuro */
+[data-theme="light"] .nav__link {
+  color: rgba(240, 237, 230, 0.68);
+}
+
+[data-theme="light"] .nav__link:hover,
+[data-theme="light"] .nav__link:focus-visible {
+  color: #F0EDE6;
+}
+
+/* Botão hambúrguer: barras claras sobre nav escuro */
+[data-theme="light"] .nav__toggle-bar {
+  background: #F0EDE6;
+}
+
+/* Overlay da foto no hero: funde para o creme claro, não para o navy */
+[data-theme="light"] .hero__photo-overlay {
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(245, 242, 236, 0.35) 75%,
+    rgba(245, 242, 236, 0.88) 100%
+  );
+}
+
+/* Sobre: ajusta overlay da foto */
+[data-theme="light"] .sobre__photo-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(42, 126, 200, 0.04) 0%,
+    transparent 50%,
+    rgba(184, 148, 63, 0.04) 100%
+  );
+}
+
+/* CTA final: texto escuro sobre dourado */
+[data-theme="light"] .cta-final__headline {
+  color: #1A1714;
+}
+
+[data-theme="light"] .cta-final__sub {
+  color: rgba(26, 23, 20, 0.68);
+}
+
+[data-theme="light"] .section--cta-final .btn--dark {
+  background-color: #1A1714;
+  color: var(--color-gold);
+}
+
+[data-theme="light"] .section--cta-final .btn--dark:hover {
+  background-color: #2C2420;
+}
+
+/* Cards: borda levemente mais visível no tema claro */
+[data-theme="light"] .diferencial__card,
+[data-theme="light"] .area__card {
+  border-color: rgba(184, 148, 63, 0.22);
+}
+
+[data-theme="light"] .problema__card {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* Depoimento cards */
+[data-theme="light"] .depoimento__card {
+  background: var(--color-surface-2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* FAQ: borda mais visível */
+[data-theme="light"] .faq__item {
+  border-bottom-color: rgba(184, 148, 63, 0.22);
+}
+
+[data-theme="light"] .faq__item:first-child {
+  border-top-color: rgba(184, 148, 63, 0.22);
+}
+
+/* Conector do processo */
+[data-theme="light"] .processo__connector {
+  background: repeating-linear-gradient(
+    to right,
+    rgba(184, 148, 63, 0.45) 0,
+    rgba(184, 148, 63, 0.45) 6px,
+    transparent 6px,
+    transparent 14px
+  );
+}

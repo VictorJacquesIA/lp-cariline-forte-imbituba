@@ -1,0 +1,163 @@
+/* ═══════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════ */
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding-top: 88px;
+  overflow: hidden;
+}
+
+/* Detalhe de luz dourada sutil no canto superior direito */
+.hero__glow {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 60%;
+  height: 80%;
+  background: radial-gradient(
+    ellipse at top right,
+    rgba(184, 148, 63, 0.06) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 60fr 40fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: calc(100svh - 88px);
+  padding-block: 5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── CONTENT (left col) ── */
+.hero__content {
+  max-width: 640px;
+}
+
+.hero__pretag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 1.5rem;
+}
+
+.hero__headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: var(--font-display);
+  font-weight: var(--font-weight-display);
+  letter-spacing: var(--letter-spacing-display);
+  line-height: var(--line-height-display);
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
+
+.hero__sub {
+  font-size: 1.0625rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  max-width: 480px;
+  margin-bottom: 2.5rem;
+}
+
+.hero__ctas {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.hero__link-secondary {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(154, 144, 128, 0.4);
+  transition: color var(--transition-fast);
+}
+
+.hero__link-secondary:hover {
+  color: var(--color-text);
+}
+
+/* ── BADGES ── */
+.hero__badges {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.hero__badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.hero__badge-dot {
+  color: var(--color-gold);
+  font-size: 0.6rem;
+  opacity: 0.7;
+}
+
+/* ── VISUAL (right col) ── */
+.hero__visual {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+.hero__photo-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.hero__photo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius-lg);
+}
+
+.hero__photo-placeholder {
+  width: 100%;
+  min-height: 480px;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+}
+
+/* Overlay que integra a foto ao fundo escuro */
+.hero__photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(17, 24, 39, 0.4) 80%,
+    rgba(17, 24, 39, 0.9) 100%
+  );
+  pointer-events: none;
+}

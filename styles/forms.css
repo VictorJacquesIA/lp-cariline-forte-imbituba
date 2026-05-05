@@ -1,0 +1,45 @@
+/* ═══════════════════════════════════════
+   FORMS — reservado para expansão futura
+   ═══════════════════════════════════════ */
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form__label {
+  font-size: var(--font-small);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+}
+
+.form__input,
+.form__textarea {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: var(--font-body);
+  padding: 0.75rem 1rem;
+  transition: border-color var(--transition-fast);
+  width: 100%;
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.6;
+}
+
+.form__input:focus,
+.form__textarea:focus {
+  outline: none;
+  border-color: var(--color-gold);
+}
+
+.form__textarea {
+  resize: vertical;
+  min-height: 120px;
+}

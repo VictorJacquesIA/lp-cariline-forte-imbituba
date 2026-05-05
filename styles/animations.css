@@ -1,0 +1,91 @@
+/* ═══════════════════════════════════════
+   ANIMATIONS
+   ═══════════════════════════════════════ */
+
+/* ── Estado inicial dos elementos animados ── */
+.js-fade,
+.js-fade-left,
+.js-stagger-item {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s var(--transition-spring),
+    transform 0.6s var(--transition-spring);
+}
+
+.js-fade-left {
+  transform: translateX(-24px);
+}
+
+/* ── Estado visível (adicionado pelo JS) ── */
+.js-fade.is-visible,
+.js-fade-left.is-visible,
+.js-stagger-item.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Delay via CSS custom property (setado pelo JS) ── */
+.js-stagger-item {
+  transition-delay: var(--stagger-delay, 0ms);
+}
+
+/* ── Hero — animações com delay progressivo ── */
+.animate-hero-1,
+.animate-hero-2,
+.animate-hero-3,
+.animate-hero-4,
+.animate-hero-5,
+.animate-hero-img {
+  opacity: 0;
+}
+
+.animate-hero-1 { animation: fadeUp 0.6s var(--transition-spring) 0ms    forwards; }
+.animate-hero-2 { animation: fadeUp 0.6s var(--transition-spring) 100ms  forwards; }
+.animate-hero-3 { animation: fadeUp 0.6s var(--transition-spring) 200ms  forwards; }
+.animate-hero-4 { animation: fadeUp 0.6s var(--transition-spring) 300ms  forwards; }
+.animate-hero-5 { animation: fadeUp 0.6s var(--transition-spring) 400ms  forwards; }
+.animate-hero-img { animation: fadeRight 0.6s var(--transition-spring) 200ms forwards; }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ── Redução de movimento (acessibilidade) ── */
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero-1,
+  .animate-hero-2,
+  .animate-hero-3,
+  .animate-hero-4,
+  .animate-hero-5,
+  .animate-hero-img {
+    animation: none;
+    opacity: 1;
+  }
+
+  .js-fade,
+  .js-fade-left,
+  .js-stagger-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

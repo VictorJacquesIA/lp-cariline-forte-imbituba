@@ -1,0 +1,57 @@
+/* ═══════════════════════════════════════
+   DESIGN SYSTEM — CAROLINE FORTE ADVOCACIA
+   ═══════════════════════════════════════ */
+
+:root {
+  /* ── CORES ── */
+  --color-bg:          #111827;   /* azul-chumbo escuro — clean, longe do preto puro */
+  --color-surface:     #1A2540;   /* superfície de cards com toque azulado */
+  --color-surface-2:   #223050;   /* superfície levemente mais clara */
+  --color-gold:        #B8943F;
+  --color-gold-light:  #D4AF6A;
+  --color-blue:        #2A7EC8;
+  --color-blue-muted:  #1A5A96;
+  --color-text:        #F0EDE6;
+  --color-text-muted:  #8B96A8;
+  --color-border:      rgba(184, 148, 63, 0.14);
+  --color-cta-bg:      #B8943F;
+  --color-cta-text:    #111827;
+
+  /* ── TIPOGRAFIA ── */
+  --font-display:   clamp(3rem, 6vw, 5.5rem);
+  --font-h2:        clamp(2rem, 4vw, 3.2rem);
+  --font-h3:        clamp(1.3rem, 2.5vw, 1.8rem);
+  --font-body:      1rem;
+  --font-small:     0.875rem;
+
+  --font-weight-display: 600;
+  --font-weight-heading: 600;
+  --font-weight-body:    400;
+
+  --letter-spacing-display: -0.03em;
+  --letter-spacing-heading: -0.02em;
+  --line-height-display: 0.95;
+  --line-height-body:    1.6;
+
+  /* ── ESPAÇAMENTOS ── */
+  --space-section:        120px;
+  --space-section-mobile: 72px;
+  --space-container:      1200px;
+  --space-gutter:         clamp(1.5rem, 5vw, 4rem);
+
+  /* ── BORDAS ── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-pill: 100px;
+
+  /* ── SOMBRAS ── */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.15);
+  --shadow-glow: 0 0 40px rgba(184, 148, 63, 0.12);
+
+  /* ── TRANSIÇÕES ── */
+  --transition-fast:   0.15s ease;
+  --transition-base:   0.25s ease;
+  --transition-slow:   0.4s ease;
+  --transition-spring: cubic-bezier(0.16, 1, 0.3, 1);
+}

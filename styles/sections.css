@@ -1,0 +1,607 @@
+/* ═══════════════════════════════════════
+   SEÇÕES — CAROLINE FORTE ADVOCACIA
+   ═══════════════════════════════════════ */
+
+/* ══════════════════════════════
+   SEÇÃO 2 — O PROBLEMA
+   ══════════════════════════════ */
+
+.section--problema {
+  background: var(--color-bg);
+}
+
+.problema__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.problema__card {
+  background: var(--color-surface);
+  border-left: 3px solid var(--color-gold);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 2rem 1.75rem;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.problema__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), 0 0 20px rgba(184, 148, 63, 0.08);
+}
+
+.problema__card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: var(--font-h3);
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-heading);
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.problema__card-text {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+
+/* ══════════════════════════════
+   SEÇÃO 3 — DIFERENCIAIS
+   ══════════════════════════════ */
+
+.section--diferenciais {
+  background: var(--color-surface);
+}
+
+.diferenciais__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.diferencial__card {
+  padding: 2rem 1.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.diferencial__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), 0 0 20px rgba(184, 148, 63, 0.08);
+  border-color: rgba(184, 148, 63, 0.35);
+}
+
+.diferencial__icon {
+  color: var(--color-gold);
+  margin-bottom: 1rem;
+}
+
+.diferencial__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  margin-bottom: 0.625rem;
+  line-height: 1.15;
+}
+
+.diferencial__text {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+
+/* ══════════════════════════════
+   SEÇÃO 4 — ÁREAS DE ATUAÇÃO
+   ══════════════════════════════ */
+
+.section--areas {
+  background: var(--color-bg);
+}
+
+.areas__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 3.5rem;
+}
+
+.area__card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+  cursor: pointer;
+}
+
+.area__card:hover,
+.area__card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), 0 0 20px rgba(184, 148, 63, 0.08);
+  border-color: rgba(184, 148, 63, 0.3);
+}
+
+.area__card-inner {
+  padding: 1.75rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.area__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+}
+
+.area__icon {
+  color: var(--color-gold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.area__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  line-height: 1.1;
+}
+
+.area__text {
+  font-size: 0.8875rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.area__tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.area__tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--color-gold);
+  border: 1px solid rgba(184, 148, 63, 0.25);
+  border-radius: var(--radius-pill);
+  padding: 0.2rem 0.6rem;
+}
+
+.areas__cta {
+  text-align: center;
+}
+
+.areas__cta-text {
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+  font-size: 1.0625rem;
+}
+
+/* ══════════════════════════════
+   SEÇÃO 5 — PROCESSO
+   ══════════════════════════════ */
+
+.section--processo {
+  background: var(--color-surface);
+}
+
+.processo__steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  position: relative;
+}
+
+/* Linha tracejada passa pelo centro dos badges (altura 44px → centro 22px) */
+.processo__connector {
+  position: absolute;
+  top: 22px;
+  /* De 12.5% − 0.75rem (centro col1) até o centro col4 */
+  left: calc(12.5% - 0.75rem);
+  width: calc(75% + 1.5rem);
+  height: 1px;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(184, 148, 63, 0.35) 0,
+    rgba(184, 148, 63, 0.35) 6px,
+    transparent 6px,
+    transparent 14px
+  );
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 1s ease;
+  pointer-events: none;
+}
+
+.processo__connector--visible {
+  clip-path: inset(0 0% 0 0);
+}
+
+.processo__step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Badge circular com número */
+.processo__number {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(184, 148, 63, 0.45);
+  background: var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--color-gold);
+  margin-bottom: 1.375rem;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.processo__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  margin-bottom: 0.625rem;
+  line-height: 1.15;
+}
+
+.processo__text {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+
+/* ══════════════════════════════
+   SEÇÃO 6 — SOBRE
+   ══════════════════════════════ */
+
+.section--sobre {
+  background: var(--color-bg);
+}
+
+.sobre__inner {
+  display: grid;
+  grid-template-columns: 40fr 60fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.sobre__visual {
+  position: relative;
+}
+
+.sobre__photo-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.sobre__photo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius-lg);
+}
+
+.sobre__photo-placeholder {
+  width: 100%;
+  min-height: 400px;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+}
+
+.sobre__photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(42, 126, 200, 0.06) 0%,
+    transparent 50%,
+    rgba(184, 148, 63, 0.06) 100%
+  );
+  pointer-events: none;
+}
+
+.sobre__content .section__pretag {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.sobre__text {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sobre__text p {
+  font-size: 1.0125rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.sobre__credentials {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 0;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.sobre__credential {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.sobre__sep {
+  color: var(--color-gold);
+  margin-inline: 0.75rem;
+  opacity: 0.7;
+}
+
+/* ══════════════════════════════
+   SEÇÃO 7 — DEPOIMENTOS
+   ══════════════════════════════ */
+
+.section--depoimentos {
+  background: var(--color-surface);
+}
+
+.depoimentos__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.depoimento__card {
+  background: var(--color-surface-2);
+  border-top: 2px solid var(--color-gold);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  padding: 2rem;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.depoimento__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.depoimento__stars {
+  color: var(--color-gold);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.25rem;
+}
+
+.depoimento__quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.depoimento__author {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+/* ══════════════════════════════
+   SEÇÃO 8 — FAQ
+   ══════════════════════════════ */
+
+.section--faq {
+  background: var(--color-bg);
+}
+
+.faq__list {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.faq__item:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.faq__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.375rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text);
+  text-align: left;
+  gap: 1rem;
+  transition: color var(--transition-fast);
+}
+
+.faq__question:hover {
+  color: var(--color-gold);
+}
+
+.faq__question[aria-expanded="true"] {
+  color: var(--color-gold);
+}
+
+.faq__icon {
+  font-size: 1.25rem;
+  color: var(--color-gold);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  line-height: 1;
+}
+
+.faq__question[aria-expanded="true"] .faq__icon {
+  transform: rotate(45deg);
+}
+
+.faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.faq__answer.is-open {
+  max-height: 500px;
+}
+
+.faq__answer p {
+  padding-bottom: 1.5rem;
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* ══════════════════════════════
+   SEÇÃO 9 — CTA FINAL
+   ══════════════════════════════ */
+
+.section--cta-final {
+  background: var(--color-gold);
+  padding-block: var(--space-section);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-final__watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(16rem, 35vw, 32rem);
+  font-weight: 600;
+  color: rgba(17, 24, 39, 0.07);
+  letter-spacing: -0.05em;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.cta-final__inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.cta-final__headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: var(--font-h2);
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-heading);
+  line-height: 1.0;
+  color: var(--color-bg);
+  margin-bottom: 1.25rem;
+}
+
+.cta-final__sub {
+  font-size: 1.0625rem;
+  color: rgba(17, 24, 39, 0.65);
+  max-width: 520px;
+  margin-inline: auto;
+  margin-bottom: 2.5rem;
+  line-height: 1.65;
+}
+
+.section--cta-final .btn--dark {
+  background-color: var(--color-bg);
+  color: var(--color-gold);
+  border: none;
+}
+
+.section--cta-final .btn--dark:hover {
+  background-color: rgba(17, 24, 39, 0.9);
+}
+
+/* ══════════════════════════════
+   WHATSAPP FLUTUANTE
+   ══════════════════════════════ */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 200;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+
+.whatsapp-float.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.whatsapp-float__btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--color-gold);
+  color: var(--color-bg);
+  padding: 0.875rem 1.25rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), 0 0 0 0 rgba(184, 148, 63, 0);
+  transition:
+    background-color var(--transition-fast),
+    box-shadow var(--transition-base),
+    transform var(--transition-fast);
+}
+
+.whatsapp-float__btn:hover {
+  background: var(--color-gold-light);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.4), 0 0 0 6px rgba(184, 148, 63, 0.15);
+  transform: translateY(-2px);
+}
+
+.whatsapp-float__icon {
+  flex-shrink: 0;
+}
+
+.whatsapp-float__label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
