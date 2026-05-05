@@ -244,13 +244,15 @@
      botão full-width para máximo CTA.
   ───────────────────────────────── */
   .hero {
-    min-height: auto;
-    padding-top: 88px; /* garante espaço fixo do nav */
+    min-height: 100svh;
+    padding-top: 88px;
   }
 
   .hero__inner {
-    padding-block: 2rem 3rem;
+    min-height: calc(100svh - 88px);
+    padding-block: 2.5rem 3.5rem;
     gap: 1.75rem;
+    align-content: center;
   }
 
   .hero__photo-wrap {
