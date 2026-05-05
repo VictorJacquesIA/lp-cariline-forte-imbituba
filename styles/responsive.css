@@ -243,16 +243,29 @@
      Foto compacta, headline dominante,
      botão full-width para máximo CTA.
   ───────────────────────────────── */
+  /* Cadeia flex garante que o conteúdo preencha os 100svh */
   .hero {
     min-height: 100svh;
     padding-top: 88px;
+    display: flex;
+    flex-direction: column;
   }
 
   .hero__inner {
-    min-height: calc(100svh - 88px);
-    padding-block: 2.5rem 3.5rem;
-    gap: 1.75rem;
-    align-content: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-block: 2.25rem 3rem;
+    gap: 0;
+    min-height: unset;
+  }
+
+  /* Hero content estica e distribui os filhos verticalmente */
+  .hero__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .hero__photo-wrap {
@@ -269,28 +282,28 @@
   .hero__pretag {
     font-size: 0.63rem;
     letter-spacing: 0.16em;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
   }
 
   .hero__headline {
     font-size: clamp(2.5rem, 11vw, 3.4rem);
     line-height: 1.0;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
   }
 
   .hero__sub {
     font-size: 0.9375rem;
     max-width: 100%;
-    margin-bottom: 1.75rem;
-    line-height: 1.6;
+    margin-bottom: 0;
+    line-height: 1.65;
   }
 
   /* CTAs em coluna: botão principal full-width */
   .hero__ctas {
     flex-direction: column;
     align-items: stretch; /* full-width */
-    gap: 1rem;
-    margin-bottom: 1.75rem;
+    gap: 0.875rem;
+    margin-bottom: 0;
   }
 
   .hero__ctas .btn--lg {
